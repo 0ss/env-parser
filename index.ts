@@ -12,7 +12,6 @@ export function envParser(FILE: string = ".env") {
       if (key && value) {
         let parsedValue: any = value
         if (!isNaN(value)) {
-          console.log(Number(value))
           parsedValue = Number(value)
         } else if (typeof value === "string") {
           parsedValue = String(value)
